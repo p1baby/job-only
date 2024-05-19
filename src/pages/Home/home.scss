@@ -1,0 +1,60 @@
+@import "../../assets/variables";
+
+.overlayHome{
+    border-left: 1px solid #e2e5ec;
+    border-right: 1px solid #e2e5ec;
+    width: 75%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        border: 1px solid #e2e5ec;
+    }
+    &::before {
+        width: 100%;
+        top: 50%;
+    }
+    &::after {
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        border-left-width: 1px;
+        border-left-style: solid;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        padding: 120px 80px 104px 80px;
+        height: 960px;
+        width: 1440px;
+        justify-content: space-between;
+        header{
+            display: flex;
+            flex-direction: row;
+            z-index: 100;
+            h1{
+                font-size: 56px;
+                font-weight: 700;
+                line-height: 67.2px;
+                text-align: start;
+                color:$text-main;
+            }
+            .gradient{
+                width: 5px;
+                height: 120px;
+                left: 240px;
+                position: fixed;
+                background: $gradient;
+            }
+        }
+        footer{
+            display: flex;
+            z-index: 100;
+        }
+    }
+}
